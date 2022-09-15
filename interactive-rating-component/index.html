@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/stylsheet.css" />
+</head>
+
+<body>
+  <main class="card">
+    <div class="contenido-frontal">
+      <img class="icono-star" src="./images/icon-star.svg" alt="img star" />
+
+      <h1 class="titulo">How did we do?</h1>
+      <p class="texto-contenido">
+        Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+
+      <ul class="botones">
+        <li><button class="btn">1</button></li>
+        <li><button class="btn">2</button></li>
+        <li><button class="btn">3</button></li>
+        <li><button class="btn">4</button></li>
+        <li><button class="btn">5</button></li>
+      </ul>
+      <button class="btn-submit">submit</button>
+    </div>
+
+    <div class="contenido contenido-posterior hidden">
+      <div class="imagen-thank-you">
+        <img src="./images/illustration-thank-you.svg" alt="img thank you" />
+      </div>
+      <div class="contenedor-rating">
+        <h3 class="texto-rating">You selected <span id="rating">0</span> out of 5</h3>
+      </div>
+      <h2>Thank you!</h2>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="https://github.com/CAMTZJ/Ejercicios-HTML-CSS-JS">Carlos</a>.
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

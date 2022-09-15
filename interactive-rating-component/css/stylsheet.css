@@ -1,0 +1,268 @@
+:root {
+  /* Primary */
+  --orange: hsl(25, 97%, 53%);
+
+  /* Neutral */
+  --white: hsla(0, 0%, 100%, 0.9);
+  --lightGrey: hsl(217, 12%, 63%, 0.08);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(215, 22%, 15%);
+  --veryDark: hsl(216, 12%, 8%);
+  --texto: hsl(217, 12%, 63%);
+
+  --font-family: "Overpass", sans-serif; /* 400 700*/
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% /* 1rem = 10px */;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  background-color: var(--veryDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+.card {
+  width: 33rem;
+  height: 37rem;
+
+  background-color: var(--darkBlue);
+  border-radius: 1.5rem;
+}
+@media (min-width: 768px) {
+  .card {
+    width: 43rem;
+    height: 42rem;
+  }
+}
+
+.contenido-frontal {
+  padding: 3rem 0rem 1rem 2.5rem;
+}
+@media (min-width: 768px) {
+  .contenido-frontal {
+    padding: 4rem 0.5rem 1rem 3.5rem;
+  }
+}
+.icono-star {
+  background-color: var(--lightGrey);
+
+  padding: 1.5rem;
+  border-radius: 50%;
+}
+
+.titulo {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 2.8rem;
+  }
+}
+
+.texto-contenido {
+  font-size: 1.4rem;
+  color: var(--texto);
+  width: 95%;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .texto-contenido {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 0 2rem 0 0;
+  }
+}
+
+.botones {
+  margin: 3rem 0;
+  width: 95%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  padding-top: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  background-color: var(--lightGrey);
+  color: var(--mediumGrey);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .botones {
+    width: 90%;
+  }
+  .btn {
+    font-size: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.btn:focus {
+  background-color: var(--mediumGrey);
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.btn-submit {
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1;
+  width: 95%;
+  padding: 1.3rem 0;
+  border-radius: 2rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .btn-submit {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+}
+.btn-submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* CONTENIDO POSTERIOR */
+/* .contenido-frontal {
+    display: none;
+} */
+
+.hidden {
+  display: none;
+}
+
+.contenido-posterior {
+
+  text-align: center;
+  margin: 0 auto;
+}
+
+.imagen-thank-you {
+  width: 15rem;
+  height: 10rem;
+  margin: 5rem auto 1rem auto;
+}
+@media (min-width: 768px) {
+  .imagen-thank-you {
+    width: 18rem;
+    height: 11rem;
+  }
+}
+
+.imagen-thank-you img {
+  height: 100%;
+}
+
+.contenedor-rating {
+  background-color: var(--lightGrey);
+  display: inline-block;
+  border-radius: 3rem;
+  margin: 1.2rem 0 3rem 0;
+}
+
+.texto-rating {
+  color: var(--orange);
+  padding: 0.8rem 1.1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .contenedor-rating {
+    margin: 2rem 0 3rem 0;
+  }
+  .texto-rating {
+    font-size: 1.5rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+.contenido h2 {
+  color: var(--white);
+}
+.contenido p {
+  color: var(--mediumGrey);
+  line-height: 1.5;
+  font-size: 1.4rem;
+  padding: 0 3rem;
+}
+@media (min-width: 768px) {
+  .contenido h2 {
+    font-size: 2.8rem;
+  }
+  .contenido p {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    padding: 0 3.5rem 0 3rem;
+    color: var(--mediumGrey);
+  }
+}
+
+.attribution {
+  color: var(--mediumGrey);
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .attribution {
+    font-size: 1.4rem;
+  }
+}
+.attribution a {
+  color: var(--orange);
+  text-decoration: none;
+}
