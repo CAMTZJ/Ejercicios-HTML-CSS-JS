@@ -3,3 +3,5 @@
 ### Notas: Links de los ejercicios
 
 ## Ejercicios hechos de https://www.frontendmentor.io/
+
+Interactive rating: https://camtzj-interactive-rating-component.netlify.app
