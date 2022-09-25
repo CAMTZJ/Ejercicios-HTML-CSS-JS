@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+
+
+</head>
+
+<body>
+
+  <main class="main">
+    <div class="header">
+
+      <div class="cards">
+        <div class="cc-back"><span id="bg-cvc">000</span></div>
+        <div class="cc-front">
+          <div>
+            <div class="bola-rellena"></div>
+            <div class="bola-sin-relleno"></div>
+          </div>
+          <div class="cc-datos">
+            <p class="cc-digitos">
+              <span class="numTarjeta">0000 0000 0000 0000</span>
+
+            </p>
+            <div class="cc-name-fecha">
+              <span id="cc-titular">jane appleseed</span>
+              <div>
+                <span id="cc-exp-month">00</span><span>/</span><span id="cc-exp-year">00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <form class="formulario ">
+      <fieldset class="formulario-datos">
+        <div class="campo">
+          <label for="cardholder-name">cardholder name</label>
+          <input class="datos" id="cardholder-name" type="text" placeholder="e.g. Jane Appleseed" name="titular">
+        </div>
+
+        <div class="campo">
+          <label for="card-number">card number</label>
+          <input class="datos" id="card-number" type="text" inputmode="numeric" placeholder="e.g. 1234 5678 9123 0000"
+            name="digitosTarjeta" maxlength="22">
+        </div>
+
+        <div class="campo">
+
+          <div class="exp-cvc" id="divMonth">
+            <label for="exp-date">exp date</label>
+            <input class="datos" id="exp-date-month" type="text" inputmode="numeric" placeholder="MM" name="expMonth"
+              maxlength="2">
+            <p class="mensaje-error">Can't be blank</p>
+          </div>
+
+          <div class="exp-cvc" id="divYear">
+            <label for="exp-date">(mm/yy)</label>
+            <input class="datos" id="exp-date-year" type="text" inputmode="numeric" placeholder="YY" name="expYear"
+              maxlength="2">
+            <p class="mensaje-error">Can't be blank</p>
+
+          </div>
+
+          <div class="exp-cvc" id="divCvc">
+            <label for="cvc">cvc</label>
+            <input class="datos" id="cvc" type="text" inputmode="numeric" placeholder="e.g. 123" name="Cvc"
+              maxlength="3">
+            <p class="mensaje-error">Can't be blank</p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <div class="thank-you hidden">
+
+        <div class="thank-you-icon">
+          <!-- <img src="./images/icon-complete.svg" alt="img complete"> -->
+        </div>
+        <h1>Thank you!</h1>
+        <h3>We've added your card details</h3>
+      </div>
+      <input class="btn" type="submit" value="Confirm">
+    </form>
+
+
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

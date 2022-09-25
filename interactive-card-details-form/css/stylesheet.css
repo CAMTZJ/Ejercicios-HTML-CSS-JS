@@ -1,0 +1,398 @@
+:root {
+  --errores: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --LightGrayish: hsl(270, 3%, 87%);
+  --DarkGrayish: hsl(279, 6%, 55%);
+  --VeryDark: hsl(278, 68%, 11%);
+
+  --font: "Space Grotesk", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*  1rem = 10px  */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font);
+  font-size: 1.8rem;
+}
+img {
+  max-width: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .main {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (min-width: 1350px) {
+}
+
+.header {
+  background-image: url(../images/bg-main-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 24rem;
+}
+@media (min-width: 1024px) {
+  .header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/bg-main-desktop.png);
+
+    background-position: top;
+  }
+}
+@media (min-width: 1350px) {
+  .header {
+    width: 90%;
+  }
+}
+.cards {
+  position: relative;
+  margin: 0 auto;
+  max-width: 43rem;
+  height: 24rem;
+}
+
+.cc-back {
+  background-image: url(../images/bg-card-back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: absolute;
+  height: 15.5rem;
+  width: 29rem;
+  right: 0;
+  margin-right: 2%;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .cc-back {
+    height: 17rem;
+    width: 30rem;
+    top: 31rem;
+    left: 18rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .cc-back {
+    left: 27rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .cc-back {
+    background-image: url(../images/bg-card-back.png);
+    height: 24rem;
+    width: 40rem;
+    margin: 0;
+    top: 47rem;
+    left: 24rem;
+    border-radius: 1rem;
+    background-position: center;
+  }
+}
+#bg-cvc {
+  color: var(--White);
+
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  right: 4rem;
+  top: 7.5rem;
+}
+@media (min-width: 1350px) {
+  #bg-cvc {
+    top: 11rem;
+    font-size: 1.4rem;
+    right: 4.2rem;
+  }
+}
+
+.cc-front {
+  background-image: url(../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 29rem;
+  height: 15.5rem;
+  margin-top: 12rem;
+  margin-left: 1.5rem;
+  border-radius: 0.8rem;
+  /* con esto se acomodan los datos de la tarjeta*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .cc-front {
+    height: 17rem;
+    width: 30rem;
+    top: 1rem;
+    left: 10rem;
+  }
+}
+@media (min-width: 1250px) {
+  .cc-front {
+    left: 19rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  .cc-front {
+    top: 7rem;
+    left: 13rem;
+    height: 24rem;
+    width: 40rem;
+  }
+}
+
+.bola-rellena {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--White);
+  border-radius: 50%;
+  margin: 1.5rem;
+  display: inline-block;
+  position: absolute;
+}
+
+.bola-sin-relleno {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: transparent;
+  border: 1.4px var(--White) solid;
+  border-radius: 50%;
+  margin: 2.5rem 0 0 5.3rem;
+}
+
+@media (min-width: 1350px) {
+  .bola-rellena {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 2rem 0 0 3rem;
+  }
+  .bola-sin-relleno {
+    width: 2rem;
+    height: 2rem;
+    margin: 3.3rem 0 0 9.5rem;
+  }
+}
+
+.cc-datos {
+  padding-left: 1.8rem;
+  font-size: 1.8rem;
+  color: var(--White);
+  font-weight: 500;
+  width: 100%;
+}
+.cc-digitos {
+  letter-spacing: 0.15rem;
+  margin: 0;
+}
+
+.numTarjeta {
+  padding-right: 0.6rem;
+}
+@media (min-width: 1350px) {
+  .cc-digitos {
+    margin: 0 0 0 1rem;
+  }
+  .numTarjeta {
+    letter-spacing: 0.3rem;
+    font-size: 2.5rem;
+    
+  }
+  
+}
+.cc-name-fecha {
+  display: flex;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  padding: 1.8rem 2rem 2.2rem 0;
+}
+@media (min-width: 1350px) {
+  .cc-name-fecha {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    padding: 2.5rem 3rem 2.7rem 1rem;
+  }
+}
+
+/* formulario */
+.mensaje-error {
+  display: none;
+  color: red;
+  font-size: 1rem;
+}
+.formulario {
+  max-width: 43rem;
+
+  display: flex;
+  flex-direction: column;
+  margin: 8rem auto 0 auto;
+  padding: 0 2rem;
+}
+@media (min-width: 1024px) {
+  .formulario {
+    width: 38rem;
+    padding: 0;
+    margin: 15rem 0 0 22rem;
+  }
+}
+@media (min-width: 1350px) {
+  .formulario {
+    
+    margin: 30rem 0 0 33rem;
+    left: 5rem;
+  }
+}
+
+.formulario fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.campo input {
+  padding: 1.2rem 1.5rem;
+  border: 1px var(--LightGrayish) solid;
+  border-radius: 1rem;
+  width: 100%;
+  margin-top: 1.1rem;
+  font-size: 1.6rem;
+}
+.campo input::placeholder {
+  color: var(--DarkGrayish);
+  opacity: 0.5;
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1350px) {
+  .campo {
+    margin-bottom: 2rem;
+  }
+}
+.campo label {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+@media (min-width: 1350px) {
+  .campo label {
+    font-size: 1.2rem;
+  }
+}
+.campo:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.exp-cvc:nth-child(1) {
+  flex: 1;
+}
+.exp-cvc:nth-child(2) {
+  margin-left: 0.5rem;
+  flex: 1;
+}
+.exp-cvc:nth-child(3) {
+  margin-left: 1rem;
+  flex: 2.5;
+}
+
+.btn {
+  border: none;
+  margin-top: 0.9rem;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 0.7rem;
+  background-color: var(--VeryDark);
+  color: var(--White);
+  
+}
+.btn:hover {
+  cursor: pointer;
+}
+@media (min-width: 400px) {
+  .btn {
+    margin-top: 2.5rem;
+  }
+}
+
+/*  Thank you   */
+
+.hidden {
+  display: none;
+}
+
+
+
+.thank-you {
+ 
+  margin: 2.5rem auto;
+  height: 22rem;
+
+  width: 33.4rem;
+}
+@media (min-width: 1024px) {
+  .thank-you {
+    width: 38rem;
+  }
+}
+@media (min-width: 1350px) {
+  .thank-you {
+    margin: 0;
+    width: 39rem;
+  }
+}
+.thank-you-icon {
+  background-image: url(../images/icon-complete.svg);
+  margin: 0 auto;
+  width: 10rem;
+  height: 10rem;
+  background-size: cover;
+  object-fit: cover;
+}
+.thank-you h1 {
+  text-align: center;
+  margin: 3rem 0 1.8rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.thank-you h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.095rem;
+  color: var(--DarkGrayish);
+  font-weight: 500;
+}
